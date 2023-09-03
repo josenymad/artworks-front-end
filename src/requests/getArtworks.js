@@ -5,7 +5,7 @@ const getArtworks = async (setArtworks, setAlert) => {
   REACT_APP_API_ENDPOINT += "getAll";
 
   try {
-    const artworks = await axios.get(REACT_APP_API_ENDPOINT);
+    const { data: artworks } = await axios.get(REACT_APP_API_ENDPOINT);
     setArtworks(artworks);
   } catch (error) {
     setAlert(error.message);

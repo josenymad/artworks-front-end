@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <ul className="navbar__list">
         <li className="navbar__list__all-artworks">
           <Link to="/">All Artworks</Link>
         </li>
+        <li>
+          <Link to="add-artwork">Add Artwork</Link>
+        </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

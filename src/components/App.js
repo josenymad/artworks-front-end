@@ -10,6 +10,7 @@ const App = () => {
       <img src={certagsLogo} alt="Certags Logo" className="App__certags-logo" />
       <Routes>
         <Route path="/" />
+        <Route path="add-artwork" />
       </Routes>
       <NavBar />
     </div>

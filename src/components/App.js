@@ -14,7 +14,7 @@ const App = () => {
 
   useEffect(() => {
     getArtworks(setArtworks, setAlert);
-  });
+  }, []);
 
   return (
     <div className="App">

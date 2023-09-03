@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import certagsLogo from "../images/certags-web.png";
 import NavBar from "./NavBar";
 import AllArtworks from "./AllArtworks";
-import getArtworks from "./requests/getArtworks";
+import getArtworks from "../requests/getArtworks";
 
 const App = () => {
   const [artworks, setArtworks] = useState();

@@ -4,6 +4,6 @@ import App from "../components/App";
 
 test("renders Certags", () => {
   render(<App />);
-  const certags = screen.getByText(/certags/i);
+  const certags = screen.getByAltText("Certags Logo");
   expect(certags).toBeInTheDocument();
 });

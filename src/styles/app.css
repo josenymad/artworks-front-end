@@ -1,3 +1,8 @@
 .App {
   text-align: center;
 }
+
+.App__certags-logo {
+  width: 300px;
+  height: auto;
+}

@@ -11,3 +11,7 @@
     justify-content: space-evenly;
     padding: 1em;
 }
+
+.navbar__list__all-artworks__link {
+    text-decoration: none;
+}

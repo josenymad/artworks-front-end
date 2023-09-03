@@ -3,6 +3,7 @@
     width: 90%;
     margin: auto;
     height: 60px;
+    border-radius: 15px;
 }
 
 .navbar__list {

@@ -1,0 +1,21 @@
+.all-artworks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 1em;
+}
+
+.all-artworks__thumbnail {
+    display: flex;
+    flex-direction: column;
+}
+
+.all-artworks__thumbnail-image {
+    width: 300px;
+    height: 300px;
+}
+
+.all-artworks__thumbnail-list {
+    list-style: none;
+    padding: 0;
+}

@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All Artworks renders correctly with data 1`] = `
+<DocumentFragment>
+  <div
+    class="all-artworks"
+  >
+    <div
+      class="all-artworks__thumbnail"
+    >
+      <object
+        alt="Artwork"
+        class="all-artworks__thumbnail-image"
+        data="Test Image"
+        type="application/pdf"
+      >
+        Test Product
+      </object>
+      <ul
+        class="all-artworks__thumbnail-list"
+      >
+        <li
+          class="all-artworks__thumbnail-company-product"
+        >
+          Test Company Test Product
+        </li>
+        <li
+          class="all-artworks__thumbnail-part-number"
+        >
+          Test Part Number
+        </li>
+        <li
+          class="all-artworks__thumbnail-date"
+        >
+          14/07/2021
+        </li>
+        <a
+          class="all-artworks__thumbnail-link"
+          href="Test Image"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Full View
+        </a>
+      </ul>
+    </div>
+    <div
+      class="all-artworks__thumbnail"
+    >
+      <object
+        alt="Artwork"
+        class="all-artworks__thumbnail-image"
+        data="Second Test Image"
+        type="application/pdf"
+      >
+        Second Test Product
+      </object>
+      <ul
+        class="all-artworks__thumbnail-list"
+      >
+        <li
+          class="all-artworks__thumbnail-company-product"
+        >
+          Second Test Company Second Test Product
+        </li>
+        <li
+          class="all-artworks__thumbnail-part-number"
+        >
+          Second Test Part Number
+        </li>
+        <li
+          class="all-artworks__thumbnail-date"
+        >
+          21/03/2023
+        </li>
+        <a
+          class="all-artworks__thumbnail-link"
+          href="Second Test Image"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Full View
+        </a>
+      </ul>
+    </div>
+    <div
+      class="all-artworks__thumbnail"
+    >
+      <object
+        alt="Artwork"
+        class="all-artworks__thumbnail-image"
+        data="Third Test Image"
+        type="application/pdf"
+      >
+        Third Test Product
+      </object>
+      <ul
+        class="all-artworks__thumbnail-list"
+      >
+        <li
+          class="all-artworks__thumbnail-company-product"
+        >
+          Third Test Company Third Test Product
+        </li>
+        <li
+          class="all-artworks__thumbnail-part-number"
+        >
+          Third Test Part Number
+        </li>
+        <li
+          class="all-artworks__thumbnail-date"
+        >
+          10/07/2022
+        </li>
+        <a
+          class="all-artworks__thumbnail-link"
+          href="Third Test Image"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Full View
+        </a>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -17,7 +17,7 @@ const App = () => {
     product: "",
     partNumber: "",
     date: "",
-    image: null,
+    image: "",
   });
 
   useEffect(() => {

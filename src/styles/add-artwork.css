@@ -1,0 +1,10 @@
+.add-artwork__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+}
+
+.add-artwork__form__label {
+    align-self: flex-start;
+}

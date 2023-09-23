@@ -1,7 +1,7 @@
 import axios from "axios";
 import FormData from "form-data";
 
-const postArtwork = async (artworkData) => {
+const postArtwork = async (artworkData, setAlert) => {
   let { REACT_APP_API_ENDPOINT } = process.env;
   REACT_APP_API_ENDPOINT += "post";
   const formData = new FormData();
@@ -12,9 +12,12 @@ const postArtwork = async (artworkData) => {
   formData.append("image", artworkData.image);
 
   try {
-    await axios.post(REACT_APP_API_ENDPOINT, formData);
+    const response = await axios.post(REACT_APP_API_ENDPOINT, formData);
+    if (response.status === 200) {
+      setAlert("Artwork uploaded");
+    }
   } catch (error) {
-    console.log(error);
+    setAlert(error);
   }
 };
 

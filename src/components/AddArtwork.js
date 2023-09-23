@@ -1,11 +1,13 @@
 import React from "react";
 import "../styles/add-artwork.css";
 import postArtwork from "../requests/postArtwork";
+import ArtworkPreview from "./ArtworkPreview";
 
-const AddArtwork = ({ formData, setFormData }) => {
+const AddArtwork = ({ formData, setFormData, alert, setAlert }) => {
   const { company, product, partNumber, date } = formData;
   const handleInputChange = (event) => {
     if (event.target.name === "image") {
+      setAlert("Double check before uploading!");
       setFormData({ ...formData, [event.target.name]: event.target.files[0] });
     } else {
       setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -13,11 +15,12 @@ const AddArtwork = ({ formData, setFormData }) => {
   };
   const handleUpload = async (event) => {
     event.preventDefault();
-    postArtwork(formData);
+    postArtwork(formData, setAlert);
   };
 
   return (
     <div className="add-artwork">
+      {formData.image && <ArtworkPreview formData={formData} alert={alert} />}
       <form
         className="add-artwork__form"
         onSubmit={handleUpload}
@@ -33,6 +36,7 @@ const AddArtwork = ({ formData, setFormData }) => {
           onChange={handleInputChange}
           placeholder="Certags"
           className="add-artwork__form__input"
+          required
         />
         <label htmlFor="product" className="add-artwork__form__label">
           Product:{}
@@ -44,6 +48,7 @@ const AddArtwork = ({ formData, setFormData }) => {
           onChange={handleInputChange}
           placeholder="Zip Tags"
           className="add-artwork__form__input"
+          required
         />
         <label htmlFor="part-number" className="add-artwork__form__label">
           Part Number:{}
@@ -66,6 +71,7 @@ const AddArtwork = ({ formData, setFormData }) => {
           value={date}
           onChange={handleInputChange}
           className="add-artwork__form__input"
+          required
         />
         <label htmlFor="image" className="add-artwork__form__label">
           Image:{}
@@ -77,6 +83,7 @@ const AddArtwork = ({ formData, setFormData }) => {
           onChange={handleInputChange}
           className="add-artwork__form__input"
           accept=".pdf"
+          required
         />
         <button type="submit" className="add-artwork__form__button">
           Upload

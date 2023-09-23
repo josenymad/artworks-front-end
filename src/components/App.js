@@ -35,7 +35,14 @@ const App = () => {
         />
         <Route
           path="add-artwork"
-          element={<AddArtwork formData={formData} setFormData={setFormData} />}
+          element={
+            <AddArtwork
+              formData={formData}
+              setFormData={setFormData}
+              alert={alert}
+              setAlert={setAlert}
+            />
+          }
         />
       </Routes>
     </div>

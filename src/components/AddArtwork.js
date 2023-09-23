@@ -1,15 +1,28 @@
 import React from "react";
 import "../styles/add-artwork.css";
+import postArtwork from "../requests/postArtwork";
 
 const AddArtwork = ({ formData, setFormData }) => {
-  const { company, product, partNumber, date, image } = formData;
+  const { company, product, partNumber, date } = formData;
   const handleInputChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
+    if (event.target.name === "image") {
+      setFormData({ ...formData, [event.target.name]: event.target.files[0] });
+    } else {
+      setFormData({ ...formData, [event.target.name]: event.target.value });
+    }
+  };
+  const handleUpload = async (event) => {
+    event.preventDefault();
+    postArtwork(formData);
   };
 
   return (
     <div className="add-artwork">
-      <form className="add-artwork__form">
+      <form
+        className="add-artwork__form"
+        onSubmit={handleUpload}
+        encType="multipart/form-data"
+      >
         <label htmlFor="company" className="add-artwork__form__label">
           Company:{}
         </label>
@@ -61,10 +74,13 @@ const AddArtwork = ({ formData, setFormData }) => {
           type="file"
           id="image"
           name="image"
-          value={image}
           onChange={handleInputChange}
           className="add-artwork__form__input"
+          accept=".pdf"
         />
+        <button type="submit" className="add-artwork__form__button">
+          Upload
+        </button>
       </form>
     </div>
   );

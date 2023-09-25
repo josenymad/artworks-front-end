@@ -86,7 +86,7 @@ const AddArtwork = ({ formData, setFormData, alert, setAlert }) => {
           required
         />
         <button type="submit" className="add-artwork__form__button">
-          Upload
+          UPLOAD
         </button>
       </form>
     </div>

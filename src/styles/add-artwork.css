@@ -34,6 +34,14 @@
     margin-bottom: 2em;
 }
 
+.add-artwork__form__input:last-of-type::file-selector-button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.add-artwork__form__input:last-of-type::file-selector-button:hover {
+    cursor: pointer;
+}
+
 .add-artwork__form__button {
     width: 30%;
     margin: auto;

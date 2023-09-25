@@ -85,9 +85,11 @@ const AddArtwork = ({ formData, setFormData, alert, setAlert }) => {
           accept=".pdf"
           required
         />
-        <button type="submit" className="add-artwork__form__button">
-          UPLOAD
-        </button>
+        {formData.image && (
+          <button type="submit" className="add-artwork__form__button">
+            UPLOAD
+          </button>
+        )}
       </form>
     </div>
   );

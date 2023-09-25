@@ -9,10 +9,14 @@
     flex-direction: column;
     max-width: 300px;
     margin: auto;
+    background-color: #333333;
+    padding: 1em;
+    border-radius: 5px;
 }
 
 .add-artwork__form__label {
     align-self: flex-start;
+    color: white;
 }
 
 .add-artwork__form__input {
@@ -26,6 +30,8 @@
 
 .add-artwork__form__input:last-of-type {
     border-style: none;
+    color: white;
+    margin-bottom: 2em;
 }
 
 .add-artwork__form__button {
@@ -40,5 +46,6 @@
 
 .add-artwork__form__button:hover {
     cursor: pointer;
-    border-color: black;
+    border-color: #face48;
+    background-color: #face48;
 }

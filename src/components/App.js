@@ -32,7 +32,7 @@ const App = () => {
 
   useEffect(() => {
     getArtworks(setArtworks, setAlert);
-  }, [artworks]);
+  }, []);
 
   return (
     <div className="App">

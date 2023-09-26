@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const NavBar = () => {
+const NavBar = ({ searchQuery, handleSearchInput, handleSearchSubmit }) => {
   return (
     <nav className="navbar">
       <ul className="navbar__list">
@@ -19,13 +19,15 @@ const NavBar = () => {
           </Link>
         </li>
         <li className="navbar__list-item">
-          <form className="navbar__list__search">
+          <form className="navbar__list__search" onSubmit={handleSearchSubmit}>
             <label htmlFor="search">{}</label>
             <input
               placeholder="Company or Product code"
               className="navbar__list__search-text"
               type="search"
               id="search"
+              value={searchQuery}
+              onChange={handleSearchInput}
             />
             <label htmlFor="search-button">{}</label>
             <button

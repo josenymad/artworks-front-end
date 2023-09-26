@@ -6,9 +6,11 @@ import NavBar from "./NavBar";
 import AllArtworks from "./AllArtworks";
 import AddArtwork from "./AddArtwork";
 import getArtworks from "../requests/getArtworks";
+import getArtworkByCompany from "../requests/getArtworkByCompany";
 
 const App = () => {
   const [artworks, setArtworks] = useState();
+  const [searchQuery, setSearchQuery] = useState();
   const [alert, setAlert] = useState(
     "If the artworks haven't loaded after a while there may be a problem with the server",
   );
@@ -19,6 +21,15 @@ const App = () => {
     date: "",
     image: "",
   });
+
+  const handleSearchInput = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    getArtworkByCompany(searchQuery, setArtworks, setAlert);
+  };
 
   const clearFormData = () => {
     setFormData({
@@ -34,10 +45,16 @@ const App = () => {
     getArtworks(setArtworks, setAlert);
   }, [artworks]);
 
+  console.log(artworks);
+
   return (
     <div className="App">
       <img src={certagsLogo} alt="Certags Logo" className="App__certags-logo" />
-      <NavBar />
+      <NavBar
+        searchQuery={searchQuery}
+        handleSearchInput={handleSearchInput}
+        handleSearchSubmit={handleSearchSubmit}
+      />
       <Routes>
         <Route
           path="/"

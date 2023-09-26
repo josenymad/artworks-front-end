@@ -45,7 +45,7 @@ const App = () => {
 
   useEffect(() => {
     getArtworks(setArtworks, setAlert);
-  }, [upload]);
+  }, [upload, Boolean(searchQuery)]);
 
   return (
     <div className="App">

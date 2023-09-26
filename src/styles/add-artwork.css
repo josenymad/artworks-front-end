@@ -33,7 +33,7 @@
 .add-artwork__form__input:last-of-type {
     border-style: none;
     color: white;
-    margin-bottom: 4em;
+    margin-bottom: 1em;
 }
 
 .add-artwork__form__input:last-of-type::file-selector-button {
@@ -52,6 +52,10 @@
     border-style: solid;
     border-width: 1px;
     font-family: 'Poppins', sans-serif;
+}
+
+.add-artwork__form__button:first-of-type {
+    margin-bottom: 0.5em;
 }
 
 .add-artwork__form__button:hover {

@@ -20,6 +20,16 @@ const App = () => {
     image: "",
   });
 
+  const clearFormData = () => {
+    setFormData({
+      company: "",
+      product: "",
+      partNumber: "",
+      date: "",
+      image: "",
+    });
+  };
+
   useEffect(() => {
     getArtworks(setArtworks, setAlert);
   }, [artworks]);
@@ -41,6 +51,7 @@ const App = () => {
               setFormData={setFormData}
               alert={alert}
               setAlert={setAlert}
+              clearFormData={clearFormData}
             />
           }
         />

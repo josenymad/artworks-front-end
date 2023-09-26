@@ -3,7 +3,13 @@ import "../styles/add-artwork.css";
 import postArtwork from "../requests/postArtwork";
 import ArtworkPreview from "./ArtworkPreview";
 
-const AddArtwork = ({ formData, setFormData, alert, setAlert }) => {
+const AddArtwork = ({
+  formData,
+  setFormData,
+  alert,
+  setAlert,
+  clearFormData,
+}) => {
   const { company, product, partNumber, date } = formData;
   const handleInputChange = (event) => {
     if (event.target.name === "image") {
@@ -85,6 +91,13 @@ const AddArtwork = ({ formData, setFormData, alert, setAlert }) => {
           accept=".pdf"
           required
         />
+        <button
+          type="button"
+          className="add-artwork__form__button"
+          onClick={clearFormData}
+        >
+          CLEAR
+        </button>
         {formData.image && (
           <button type="submit" className="add-artwork__form__button">
             UPLOAD

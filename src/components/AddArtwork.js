@@ -9,6 +9,7 @@ const AddArtwork = ({
   alert,
   setAlert,
   clearFormData,
+  setUpload,
 }) => {
   const { company, product, partNumber, date } = formData;
   const handleInputChange = (event) => {
@@ -21,7 +22,7 @@ const AddArtwork = ({
   };
   const handleUpload = async (event) => {
     event.preventDefault();
-    postArtwork(formData, setAlert);
+    postArtwork(formData, setAlert, setUpload);
   };
 
   return (

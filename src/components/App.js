@@ -10,6 +10,7 @@ import getArtworkByCompany from "../requests/getArtworkByCompany";
 
 const App = () => {
   const [artworks, setArtworks] = useState();
+  const [upload, setUpload] = useState(false);
   const [searchQuery, setSearchQuery] = useState();
   const [alert, setAlert] = useState(
     "If the artworks haven't loaded after a while there may be a problem with the server",
@@ -39,13 +40,12 @@ const App = () => {
       date: "",
       image: "",
     });
+    setUpload(false);
   };
 
   useEffect(() => {
     getArtworks(setArtworks, setAlert);
-  }, [artworks]);
-
-  console.log(artworks);
+  }, [upload]);
 
   return (
     <div className="App">
@@ -69,6 +69,7 @@ const App = () => {
               alert={alert}
               setAlert={setAlert}
               clearFormData={clearFormData}
+              setUpload={setUpload}
             />
           }
         />

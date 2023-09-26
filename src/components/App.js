@@ -11,7 +11,7 @@ import getArtworkByCompany from "../requests/getArtworkByCompany";
 const App = () => {
   const [artworks, setArtworks] = useState();
   const [upload, setUpload] = useState(false);
-  const [searchQuery, setSearchQuery] = useState();
+  const [searchQuery, setSearchQuery] = useState("");
   const [alert, setAlert] = useState(
     "If the artworks haven't loaded after a while there may be a problem with the server",
   );

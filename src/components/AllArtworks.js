@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/all-artworks.css";
 
 const AllArtworks = ({ artworks, alert }) => {
-  if (artworks) {
+  if (artworks.length) {
     return (
       <div className="all-artworks">
         {artworks.map((artwork) => {

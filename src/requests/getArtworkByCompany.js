@@ -7,6 +7,9 @@ const getArtworkByCompany = async (searchQuery, setArtworks, setAlert) => {
   try {
     const { data: artworks } = await axios.get(REACT_APP_API_ENDPOINT);
     setArtworks(artworks);
+    if (!artworks.length) {
+      setAlert(`Sorry, there seems to be no search results for ${searchQuery}`);
+    }
   } catch (error) {
     setAlert(error.message);
   }

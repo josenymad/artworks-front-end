@@ -9,6 +9,7 @@ import getArtworks from "../requests/getArtworks";
 
 const App = () => {
   const [artworks, setArtworks] = useState();
+  const [upload, setUpload] = useState(false);
   const [alert, setAlert] = useState(
     "If the artworks haven't loaded after a while there may be a problem with the server",
   );
@@ -28,11 +29,12 @@ const App = () => {
       date: "",
       image: "",
     });
+    setUpload(false);
   };
 
   useEffect(() => {
     getArtworks(setArtworks, setAlert);
-  }, []);
+  }, [upload]);
 
   return (
     <div className="App">
@@ -52,6 +54,7 @@ const App = () => {
               alert={alert}
               setAlert={setAlert}
               clearFormData={clearFormData}
+              setUpload={setUpload}
             />
           }
         />

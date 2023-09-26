@@ -7,7 +7,7 @@ const AllArtworks = ({ artworks, alert }) => {
       <div className="all-artworks">
         {artworks.map((artwork) => {
           return (
-            <div className="all-artworks__thumbnail" key={artwork.partNumber}>
+            <div className="all-artworks__thumbnail" key={artwork._id}>
               <object
                 data={artwork.image}
                 className="all-artworks__thumbnail-image"

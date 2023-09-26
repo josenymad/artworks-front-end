@@ -8,14 +8,16 @@ const ArtworkPreview = ({ formData, alert }) => {
   const { image } = formData;
   return (
     <div className="artwork-preview">
-      <Document file={image}>
-        <Page
-          pageNumber={1}
-          renderAnnotationLayer={false}
-          renderTextLayer={false}
-          width={300}
-        />
-      </Document>
+      <div className="artwork-preview__thumbnail">
+        <Document file={image}>
+          <Page
+            pageNumber={1}
+            renderAnnotationLayer={false}
+            renderTextLayer={false}
+            width={300}
+          />
+        </Document>
+      </div>
       <p className="artwork-preview__alert">{alert}</p>
     </div>
   );

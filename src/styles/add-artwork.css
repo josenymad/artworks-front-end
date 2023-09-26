@@ -1,7 +1,8 @@
 .add-artwork {
     display: flex;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    width: 50%;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
 .add-artwork__form {
@@ -12,6 +13,7 @@
     background-color: #333333;
     padding: 1em;
     border-radius: 5px;
+    margin-top: 1em;
 }
 
 .add-artwork__form__label {
@@ -31,7 +33,7 @@
 .add-artwork__form__input:last-of-type {
     border-style: none;
     color: white;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 }
 
 .add-artwork__form__input:last-of-type::file-selector-button {

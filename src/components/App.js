@@ -6,7 +6,8 @@ import NavBar from "./NavBar";
 import AllArtworks from "./AllArtworks";
 import AddArtwork from "./AddArtwork";
 import getArtworks from "../requests/getArtworks";
-import getArtworkByCompany from "../requests/getArtworkByCompany";
+import getArtworksByCompany from "../requests/getArtworksByCompany";
+import getArtworksByPartNumber from "../requests/getArtworksByPartNumber";
 
 const App = () => {
   const [artworks, setArtworks] = useState();
@@ -29,7 +30,11 @@ const App = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    getArtworkByCompany(searchQuery, setArtworks, setAlert);
+    if (searchQuery.slice(0, 5).toLowerCase() === "ceruk") {
+      getArtworksByPartNumber(searchQuery, setArtworks, setAlert);
+    } else {
+      getArtworksByCompany(searchQuery, setArtworks, setAlert);
+    }
   };
 
   const clearFormData = () => {

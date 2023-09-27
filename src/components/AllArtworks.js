@@ -17,8 +17,11 @@ const AllArtworks = ({ artworks, alert }) => {
                 {artwork.product}
               </object>
               <ul className="all-artworks__thumbnail-list">
-                <li className="all-artworks__thumbnail-company-product">
-                  {`${artwork.company} ${artwork.product}`}
+                <li className="all-artworks__thumbnail-company">
+                  {artwork.company}
+                </li>
+                <li className="all-artworks__thumbnail-product">
+                  {artwork.product}
                 </li>
                 <li className="all-artworks__thumbnail-part-number">
                   {artwork.partNumber}

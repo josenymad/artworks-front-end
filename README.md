@@ -19,7 +19,9 @@ This online portal solves these problems by organising information into a single
 
   ## Additional features to come
 
-   - Log in
+  I have ideas to make this a go to sales platform. This is what I'm thinking of adding next:
+  
+   - Log in (high-priority)
    - Display pricing
    - Email orders (to place a new order)
    - Email pricing (to request for pricing)

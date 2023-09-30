@@ -4,7 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const NavBar = ({ searchQuery, handleSearchInput, handleSearchSubmit }) => {
+const NavBar = ({
+  searchQuery,
+  handleSearchInput,
+  handleSearchSubmit,
+  signOut,
+}) => {
   const { pathname } = useLocation();
 
   return (
@@ -46,6 +51,9 @@ const NavBar = ({ searchQuery, handleSearchInput, handleSearchSubmit }) => {
             </form>
           </li>
         )}
+        <button onClick={signOut} type="button">
+          Sign Out
+        </button>
       </ul>
     </nav>
   );

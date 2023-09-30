@@ -9,7 +9,7 @@ import getArtworks from "../requests/getArtworks";
 import getArtworksByCompany from "../requests/getArtworksByCompany";
 import getArtworksByPartNumber from "../requests/getArtworksByPartNumber";
 
-const App = () => {
+const App = ({ signOut }) => {
   const [artworks, setArtworks] = useState();
   const [upload, setUpload] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -59,6 +59,7 @@ const App = () => {
         searchQuery={searchQuery}
         handleSearchInput={handleSearchInput}
         handleSearchSubmit={handleSearchSubmit}
+        signOut={signOut}
       />
       <Routes>
         <Route

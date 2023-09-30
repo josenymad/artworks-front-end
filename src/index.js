@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import { Amplify } from "aws-amplify";
-import { Authenticator } from "@aws-amplify/ui-react";
+import { Authenticator, useTheme, View, Image } from "@aws-amplify/ui-react";
 import App from "./components/App";
+import certagsLogo from "./images/certags-web.png";
 // eslint-disable-next-line import/no-unresolved
 import "@aws-amplify/ui-react/styles.css";
 
@@ -30,15 +31,25 @@ Amplify.configure({
   },
 });
 
+const components = {
+  Header() {
+    const { tokens } = useTheme();
+
+    return (
+      <View textAlign="center" padding={tokens.space.large}>
+        <Image alt="Amplify logo" src={certagsLogo} />
+      </View>
+    );
+  },
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Authenticator>
-    {({ signOut }) => (
-      <React.StrictMode>
-        <BrowserRouter>
-          <App signOut={signOut} />
-        </BrowserRouter>
-      </React.StrictMode>
-    )}
-  </Authenticator>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <Authenticator hideSignUp components={components}>
+        {({ signOut }) => <App signOut={signOut} />}
+      </Authenticator>
+    </BrowserRouter>
+  </React.StrictMode>,
 );

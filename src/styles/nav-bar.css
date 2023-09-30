@@ -2,7 +2,7 @@
     background-color: #face48;
     width: 90%;
     margin: auto;
-    height: 60px;
+    min-height: 60px;
     border-radius: 15px;
 }
 
@@ -10,7 +10,8 @@
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    padding: 1em;
+    padding-top: 1em;
+    align-items: center;
 }
 
 .navbar__list__all-artworks__link {
@@ -22,12 +23,13 @@
 }
 
 .navbar__list__search-text {
-    padding: 0.3em;
+    padding: 0.3em !important;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     width: 200px;
+    font: revert;
 }
 
 .navbar__list__search-button {
@@ -37,6 +39,7 @@
     border-width: 1px;
     margin-left: 0.5em;
     transition: .3s;
+    font: revert;
 }
 
 .navbar__list__search-button:hover {

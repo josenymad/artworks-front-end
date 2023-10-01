@@ -6,9 +6,22 @@
 
 .amplify-button[data-variation='primary'] {
     background-color: #333333;
+    color: white;
 }
 
 .amplify-button[data-variation='primary']:hover {
     background-color: #face48;
     color: black;
+}
+
+.amplify-loader circle:last-of-type {
+    stroke: #333333 !important;
+}
+
+.amplify-button[data-variation='link'] {
+    color: #333333;
+}
+
+.amplify-button[data-variation='link']:hover {
+    background-color: #FEF2CD;
 }

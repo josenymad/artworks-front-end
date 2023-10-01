@@ -20,9 +20,14 @@ exports[`All Artworks renders correctly with data 1`] = `
         class="all-artworks__thumbnail-list"
       >
         <li
-          class="all-artworks__thumbnail-company-product"
+          class="all-artworks__thumbnail-company"
         >
-          Test Company Test Product
+          Test Company
+        </li>
+        <li
+          class="all-artworks__thumbnail-product"
+        >
+          Test Product
         </li>
         <li
           class="all-artworks__thumbnail-part-number"
@@ -59,9 +64,14 @@ exports[`All Artworks renders correctly with data 1`] = `
         class="all-artworks__thumbnail-list"
       >
         <li
-          class="all-artworks__thumbnail-company-product"
+          class="all-artworks__thumbnail-company"
         >
-          Second Test Company Second Test Product
+          Second Test Company
+        </li>
+        <li
+          class="all-artworks__thumbnail-product"
+        >
+          Second Test Product
         </li>
         <li
           class="all-artworks__thumbnail-part-number"
@@ -98,9 +108,14 @@ exports[`All Artworks renders correctly with data 1`] = `
         class="all-artworks__thumbnail-list"
       >
         <li
-          class="all-artworks__thumbnail-company-product"
+          class="all-artworks__thumbnail-company"
         >
-          Third Test Company Third Test Product
+          Third Test Company
+        </li>
+        <li
+          class="all-artworks__thumbnail-product"
+        >
+          Third Test Product
         </li>
         <li
           class="all-artworks__thumbnail-part-number"

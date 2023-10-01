@@ -14,8 +14,12 @@
     color: black;
 }
 
+.amplify-loader circle:first-of-type {
+    stroke: #face48;
+}
+
 .amplify-loader circle:last-of-type {
-    stroke: #333333 !important;
+    stroke: #ffffff !important;
 }
 
 .amplify-button[data-variation='link'] {

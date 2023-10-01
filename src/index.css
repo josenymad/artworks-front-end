@@ -4,6 +4,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.amplify-image {
-    width: 300px;
+.amplify-button[data-variation='primary'] {
+    background-color: #333333;
+}
+
+.amplify-button[data-variation='primary']:hover {
+    background-color: #face48;
+    color: black;
 }

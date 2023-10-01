@@ -14,11 +14,19 @@
     align-items: center;
 }
 
-.navbar__list__all-artworks__link {
+.navbar__list__link {
     text-decoration: none;
+    transition: 0.3s;
+    padding: 0.3em;
+    border-radius: 10px;
 }
 
-.navbar__list__all-artworks__link:visited {
+.navbar__list__link:hover, .navbar__list__link:visited:hover {
+    color: white;
+    box-shadow: inset 100px 30px 100px 30px #333333;
+}
+
+.navbar__list__link:visited {
     color: black;
 }
 
@@ -45,4 +53,22 @@
 .navbar__list__search-button:hover {
     cursor: pointer;
     transform: translateX(-5px);
+}
+
+.navbar__list__log-out {
+    background-color: #333333;
+    color: white;
+    border-style: none;
+    border-style: solid;
+    border-color: #333333;
+    border-radius: 10px;
+    width: 90px;
+}
+
+.navbar__list__log-out:hover {
+    cursor: pointer;
+}
+
+.navbar__list__log-out:hover::after {
+    content: "?";
 }

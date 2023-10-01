@@ -27,13 +27,11 @@
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .add-artwork__form__input:last-of-type {
     border-style: none;
     color: white;
-    margin-bottom: 1em;
 }
 
 .add-artwork__form__input:last-of-type::file-selector-button {
@@ -44,6 +42,12 @@
     cursor: pointer;
 }
 
+.add-artwork__form-buttons {
+    margin-bottom: 0.35em;
+    display: flex;
+    justify-content: space-around;
+}
+
 .add-artwork__form__button {
     width: 30%;
     margin: auto;
@@ -51,11 +55,6 @@
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.add-artwork__form__button:first-of-type {
-    margin-bottom: 0.5em;
 }
 
 .add-artwork__form__button:hover {

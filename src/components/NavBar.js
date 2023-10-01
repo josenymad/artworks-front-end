@@ -16,12 +16,12 @@ const NavBar = ({
     <nav className="navbar">
       <ul className="navbar__list">
         <li className="navbar__list-item">
-          <Link to="/" className="navbar__list__all-artworks__link">
+          <Link to="/" className="navbar__list__link">
             All Artworks
           </Link>
         </li>
         <li className="navbar__list-item">
-          <Link to="add-artwork" className="navbar__list__all-artworks__link">
+          <Link to="add-artwork" className="navbar__list__link">
             Add Artwork
           </Link>
         </li>
@@ -51,9 +51,15 @@ const NavBar = ({
             </form>
           </li>
         )}
-        <button onClick={signOut} type="button">
-          Sign Out
-        </button>
+        <li className="navbar__list-item">
+          <button
+            onClick={signOut}
+            type="button"
+            className="navbar__list__log-out"
+          >
+            Log Out
+          </button>
+        </li>
       </ul>
     </nav>
   );

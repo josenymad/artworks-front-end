@@ -92,18 +92,20 @@ const AddArtwork = ({
           accept=".pdf"
           required
         />
-        <button
-          type="button"
-          className="add-artwork__form__button"
-          onClick={clearFormData}
-        >
-          CLEAR
-        </button>
-        {formData.image && (
-          <button type="submit" className="add-artwork__form__button">
-            UPLOAD
+        <div className="add-artwork__form-buttons">
+          {formData.image && (
+            <button type="submit" className="add-artwork__form__button">
+              UPLOAD
+            </button>
+          )}
+          <button
+            type="button"
+            className="add-artwork__form__button"
+            onClick={clearFormData}
+          >
+            CLEAR
           </button>
-        )}
+        </div>
       </form>
     </div>
   );

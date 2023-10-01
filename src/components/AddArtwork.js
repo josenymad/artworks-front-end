@@ -16,6 +16,7 @@ const AddArtwork = ({
     if (event.target.name === "image") {
       setAlert("Double check before uploading!");
       setFormData({ ...formData, [event.target.name]: event.target.files[0] });
+      setUpload(false);
     } else {
       setFormData({ ...formData, [event.target.name]: event.target.value });
     }

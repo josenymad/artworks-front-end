@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/all-artworks.css";
+import deleteArtwork from "../requests/deleteArtwork";
 
-const AllArtworks = ({ artworks, alert }) => {
+const AllArtworks = ({ artworks, alert, setDeleted }) => {
   if (artworks && artworks.length) {
     return (
       <div className="all-artworks">
@@ -29,14 +30,25 @@ const AllArtworks = ({ artworks, alert }) => {
                 <li className="all-artworks__thumbnail-date">
                   {new Date(artwork.date).toLocaleDateString("en-gb")}
                 </li>
-                <a
-                  href={artwork.image}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="all-artworks__thumbnail-link"
-                >
-                  Full View
-                </a>
+                <li className="all-artworks__thumbnail-actions">
+                  <a
+                    href={artwork.image}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="all-artworks__thumbnail-link"
+                  >
+                    Full View
+                  </a>
+                  <button
+                    className="all-artworks__thumbnail-delete"
+                    type="button"
+                    onClick={() => {
+                      deleteArtwork(artwork._id, setDeleted);
+                    }}
+                  >
+                    Delete
+                  </button>
+                </li>
               </ul>
             </div>
           );

@@ -12,6 +12,7 @@ import getArtworksByPartNumber from "../requests/getArtworksByPartNumber";
 const App = ({ signOut }) => {
   const [artworks, setArtworks] = useState();
   const [upload, setUpload] = useState(false);
+  const [deleted, setDeleted] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [alert, setAlert] = useState(
     "If the artworks haven't loaded after a while there may be a problem with the server",
@@ -50,7 +51,8 @@ const App = ({ signOut }) => {
 
   useEffect(() => {
     getArtworks(setArtworks, setAlert);
-  }, [upload, Boolean(searchQuery)]);
+    setDeleted(false);
+  }, [upload, Boolean(searchQuery), deleted]);
 
   return (
     <div className="App">
@@ -64,7 +66,13 @@ const App = ({ signOut }) => {
       <Routes>
         <Route
           path="/"
-          element={<AllArtworks artworks={artworks} alert={alert} />}
+          element={
+            <AllArtworks
+              artworks={artworks}
+              alert={alert}
+              setDeleted={setDeleted}
+            />
+          }
         />
         <Route
           path="add-artwork"

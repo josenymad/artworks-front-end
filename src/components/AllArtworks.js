@@ -9,28 +9,16 @@ const AllArtworks = ({ artworks, alert, setDeleted }) => {
         {artworks.map((artwork) => {
           return (
             <div className="all-artworks__thumbnail" key={artwork._id}>
-              <object
-                data={artwork.image}
-                className="all-artworks__thumbnail-image"
-                alt="Artwork"
-                type="application/pdf"
-              >
-                {artwork.product}
-              </object>
-              <ul className="all-artworks__thumbnail-list">
-                <li className="all-artworks__thumbnail-company">
-                  {artwork.company}
-                </li>
-                <li className="all-artworks__thumbnail-product">
+              <div className="all-artworks__thumbnail-container">
+                <object
+                  data={artwork.image}
+                  className="all-artworks__thumbnail-image"
+                  alt="Artwork"
+                  type="application/pdf"
+                >
                   {artwork.product}
-                </li>
-                <li className="all-artworks__thumbnail-part-number">
-                  {artwork.partNumber}
-                </li>
-                <li className="all-artworks__thumbnail-date">
-                  {new Date(artwork.date).toLocaleDateString("en-gb")}
-                </li>
-                <li className="all-artworks__thumbnail-actions">
+                </object>
+                <div className="all-artworks__thumbnail-image__foreground">
                   <a
                     href={artwork.image}
                     target="_blank"
@@ -48,6 +36,20 @@ const AllArtworks = ({ artworks, alert, setDeleted }) => {
                   >
                     Delete
                   </button>
+                </div>
+              </div>
+              <ul className="all-artworks__thumbnail-list">
+                <li className="all-artworks__thumbnail-company">
+                  {artwork.company}
+                </li>
+                <li className="all-artworks__thumbnail-product">
+                  {artwork.product}
+                </li>
+                <li className="all-artworks__thumbnail-part-number">
+                  {artwork.partNumber}
+                </li>
+                <li className="all-artworks__thumbnail-date">
+                  {new Date(artwork.date).toLocaleDateString("en-gb")}
                 </li>
               </ul>
             </div>

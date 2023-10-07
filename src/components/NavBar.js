@@ -25,7 +25,8 @@ const NavBar = ({
             Add Artwork
           </Link>
         </li>
-        {pathname === "/add-artwork" ? null : (
+        {pathname === "/add-artwork" ||
+        pathname === "/update-artwork" ? null : (
           <li className="navbar__list-item">
             <form
               className="navbar__list__search"

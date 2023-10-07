@@ -29,16 +29,16 @@
 
 .all-artworks__thumbnail-link {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 18px;
+    left: 15px;
     text-decoration: none;
     color: #face48;
 }
 
 .all-artworks__thumbnail-delete {
     position: absolute;
-    top: 17px;
-    left: 100px;
+    top: 16px;
+    left: 98px;
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
@@ -46,6 +46,8 @@
 
 .all-artworks__thumbnail-delete:hover {
     cursor: pointer;
+    background-color: #face48;
+    border-color: #face48;
 }
 
 .all-artworks__thumbnail-list {

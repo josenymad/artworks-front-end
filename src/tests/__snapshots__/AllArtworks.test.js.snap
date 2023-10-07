@@ -8,14 +8,36 @@ exports[`All Artworks renders correctly with data 1`] = `
     <div
       class="all-artworks__thumbnail"
     >
-      <object
-        alt="Artwork"
-        class="all-artworks__thumbnail-image"
-        data="Test Image"
-        type="application/pdf"
+      <div
+        class="all-artworks__thumbnail-container"
       >
-        Test Product
-      </object>
+        <object
+          alt="Artwork"
+          class="all-artworks__thumbnail-image"
+          data="Test Image"
+          type="application/pdf"
+        >
+          Test Product
+        </object>
+        <div
+          class="all-artworks__thumbnail-image__foreground"
+        >
+          <a
+            class="all-artworks__thumbnail-link"
+            href="Test Image"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Full View
+          </a>
+          <button
+            class="all-artworks__thumbnail-delete"
+            type="button"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
       <ul
         class="all-artworks__thumbnail-list"
       >
@@ -39,27 +61,41 @@ exports[`All Artworks renders correctly with data 1`] = `
         >
           14/07/2021
         </li>
-        <a
-          class="all-artworks__thumbnail-link"
-          href="Test Image"
-          rel="noreferrer"
-          target="_blank"
-        >
-          Full View
-        </a>
       </ul>
     </div>
     <div
       class="all-artworks__thumbnail"
     >
-      <object
-        alt="Artwork"
-        class="all-artworks__thumbnail-image"
-        data="Second Test Image"
-        type="application/pdf"
+      <div
+        class="all-artworks__thumbnail-container"
       >
-        Second Test Product
-      </object>
+        <object
+          alt="Artwork"
+          class="all-artworks__thumbnail-image"
+          data="Second Test Image"
+          type="application/pdf"
+        >
+          Second Test Product
+        </object>
+        <div
+          class="all-artworks__thumbnail-image__foreground"
+        >
+          <a
+            class="all-artworks__thumbnail-link"
+            href="Second Test Image"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Full View
+          </a>
+          <button
+            class="all-artworks__thumbnail-delete"
+            type="button"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
       <ul
         class="all-artworks__thumbnail-list"
       >
@@ -83,27 +119,41 @@ exports[`All Artworks renders correctly with data 1`] = `
         >
           21/03/2023
         </li>
-        <a
-          class="all-artworks__thumbnail-link"
-          href="Second Test Image"
-          rel="noreferrer"
-          target="_blank"
-        >
-          Full View
-        </a>
       </ul>
     </div>
     <div
       class="all-artworks__thumbnail"
     >
-      <object
-        alt="Artwork"
-        class="all-artworks__thumbnail-image"
-        data="Third Test Image"
-        type="application/pdf"
+      <div
+        class="all-artworks__thumbnail-container"
       >
-        Third Test Product
-      </object>
+        <object
+          alt="Artwork"
+          class="all-artworks__thumbnail-image"
+          data="Third Test Image"
+          type="application/pdf"
+        >
+          Third Test Product
+        </object>
+        <div
+          class="all-artworks__thumbnail-image__foreground"
+        >
+          <a
+            class="all-artworks__thumbnail-link"
+            href="Third Test Image"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Full View
+          </a>
+          <button
+            class="all-artworks__thumbnail-delete"
+            type="button"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
       <ul
         class="all-artworks__thumbnail-list"
       >
@@ -127,14 +177,6 @@ exports[`All Artworks renders correctly with data 1`] = `
         >
           10/07/2022
         </li>
-        <a
-          class="all-artworks__thumbnail-link"
-          href="Third Test Image"
-          rel="noreferrer"
-          target="_blank"
-        >
-          Full View
-        </a>
       </ul>
     </div>
   </div>

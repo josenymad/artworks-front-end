@@ -1,8 +1,9 @@
 import React from "react";
 import "../styles/all-artworks.css";
+import { Link } from "react-router-dom";
 import deleteArtwork from "../requests/deleteArtwork";
 
-const AllArtworks = ({ artworks, alert, setDeleted }) => {
+const AllArtworks = ({ artworks, alert, setDeleted, setSelectedArtwork }) => {
   if (artworks && artworks.length) {
     return (
       <div className="all-artworks">
@@ -27,6 +28,15 @@ const AllArtworks = ({ artworks, alert, setDeleted }) => {
                   >
                     Full View
                   </a>
+                  <Link
+                    to="/update-artwork"
+                    className="all-artworks__thumbnail-link"
+                    onClick={() => {
+                      setSelectedArtwork(artwork);
+                    }}
+                  >
+                    Update
+                  </Link>
                   <button
                     className="all-artworks__thumbnail-delete"
                     type="button"

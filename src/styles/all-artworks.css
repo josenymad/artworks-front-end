@@ -34,21 +34,36 @@
     display: none;
 }
 
-.all-artworks__thumbnail-link {
+.all-artworks__thumbnail-link:first-of-type {
     position: absolute;
-    top: -42px;
+    top: -55px;
     left: 15px;
     text-decoration: none;
     color: #face48;
+    font-size: 0.9em;
+}
+
+.all-artworks__thumbnail-link:last-of-type {
+    position: absolute;
+    top: -25px;
+    left: 15px;
+    text-decoration: none;
+    color: #face48;
+    font-size: 0.9em;
+}
+
+.all-artworks__thumbnail-link:hover {
+    text-decoration: underline;
 }
 
 .all-artworks__thumbnail-delete {
     position: absolute;
-    top: -44px;
+    top: -42px;
     left: 98px;
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
+    font-size: 0.9em;
 }
 
 .all-artworks__thumbnail-delete:hover {

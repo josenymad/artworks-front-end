@@ -8,12 +8,14 @@ import AddArtwork from "./AddArtwork";
 import getArtworks from "../requests/getArtworks";
 import getArtworksByCompany from "../requests/getArtworksByCompany";
 import getArtworksByPartNumber from "../requests/getArtworksByPartNumber";
+import UpdateArtwork from "./UpdateArtwork";
 
 const App = ({ signOut }) => {
   const [artworks, setArtworks] = useState();
   const [upload, setUpload] = useState(false);
   const [deleted, setDeleted] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedArtwork, setSelectedArtwork] = useState();
   const [alert, setAlert] = useState(
     "If the artworks haven't loaded after a while there may be a problem with the server",
   );
@@ -71,6 +73,7 @@ const App = ({ signOut }) => {
               artworks={artworks}
               alert={alert}
               setDeleted={setDeleted}
+              setSelectedArtwork={setSelectedArtwork}
             />
           }
         />
@@ -84,6 +87,16 @@ const App = ({ signOut }) => {
               setAlert={setAlert}
               clearFormData={clearFormData}
               setUpload={setUpload}
+            />
+          }
+        />
+        <Route
+          path="update-artwork"
+          element={
+            <UpdateArtwork
+              selectedArtwork={selectedArtwork}
+              formData={formData}
+              setFormData={setFormData}
             />
           }
         />

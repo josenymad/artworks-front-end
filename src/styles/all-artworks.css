@@ -19,17 +19,24 @@
     position: relative;
 }
 
+.all-artworks__thumbnail-container:hover {
+    .all-artworks__thumbnail-image__foreground {
+        display: block;
+    }
+}
+
 .all-artworks__thumbnail-image__foreground {
     position: absolute;
-    top: 0;
+    top: 58px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 87%;
+    display: none;
 }
 
 .all-artworks__thumbnail-link {
     position: absolute;
-    top: 18px;
+    top: -42px;
     left: 15px;
     text-decoration: none;
     color: #face48;
@@ -37,7 +44,7 @@
 
 .all-artworks__thumbnail-delete {
     position: absolute;
-    top: 16px;
+    top: -44px;
     left: 98px;
     border-radius: 10px;
     border-style: solid;

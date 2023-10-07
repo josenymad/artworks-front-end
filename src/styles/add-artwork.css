@@ -1,6 +1,6 @@
 .add-artwork {
     display: flex;
-    width: 50%;
+    width: fit-content;
     margin: auto;
     flex-wrap: wrap;
 }
@@ -8,12 +8,13 @@
 .add-artwork__form {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    width: 300px;
     margin: auto;
+    margin-left: 1em;
+    margin-top: 1em;
     background-color: #333333;
     padding: 1em;
     border-radius: 5px;
-    margin-top: 1em;
 }
 
 .add-artwork__form__label {

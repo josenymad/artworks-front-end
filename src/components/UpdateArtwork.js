@@ -103,7 +103,11 @@ const UpdateArtwork = ({
     );
   }
 
-  return null;
+  return (
+    <p className="update-artwork__error">
+      Please head back and select an artwork to update
+    </p>
+  );
 };
 
 export default UpdateArtwork;

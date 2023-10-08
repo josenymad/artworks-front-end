@@ -76,4 +76,6 @@
     margin-top: 0;
     list-style: none;
     padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 -3px 6px #face48, 0 3px 6px #333333;
 }

@@ -43,6 +43,7 @@ const UpdateArtwork = ({
             onChange={handleInputChange}
             placeholder={company}
             className="update-artwork__form__input"
+            maxLength="36"
           />
           <label htmlFor="product" className="update-artwork__form__label">
             Product:{}
@@ -54,6 +55,7 @@ const UpdateArtwork = ({
             onChange={handleInputChange}
             placeholder={product}
             className="update-artwork__form__input"
+            maxLength="36"
           />
           <label htmlFor="part-number" className="update-artwork__form__label">
             Part Number:{}
@@ -65,6 +67,7 @@ const UpdateArtwork = ({
             onChange={handleInputChange}
             placeholder={partNumber}
             className="update-artwork__form__input"
+            maxLength="36"
           />
           <label htmlFor="date" className="update-artwork__form__label">
             Date:{" "}

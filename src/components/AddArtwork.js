@@ -44,6 +44,7 @@ const AddArtwork = ({
           onChange={handleInputChange}
           placeholder="Certags"
           className="add-artwork__form__input"
+          maxLength="36"
           required
         />
         <label htmlFor="product" className="add-artwork__form__label">
@@ -54,8 +55,9 @@ const AddArtwork = ({
           name="product"
           value={product}
           onChange={handleInputChange}
-          placeholder="Zip Tags"
+          placeholder="size, material, detail"
           className="add-artwork__form__input"
+          maxLength="36"
           required
         />
         <label htmlFor="part-number" className="add-artwork__form__label">
@@ -68,6 +70,7 @@ const AddArtwork = ({
           onChange={handleInputChange}
           placeholder="CERUK0123"
           className="add-artwork__form__input"
+          maxLength="36"
         />
         <label htmlFor="date" className="add-artwork__form__label">
           Date:{}

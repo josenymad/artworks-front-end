@@ -72,8 +72,10 @@ const App = ({ signOut }) => {
             <AllArtworks
               artworks={artworks}
               alert={alert}
+              setAlert={setAlert}
               setDeleted={setDeleted}
               setSelectedArtwork={setSelectedArtwork}
+              clearFormData={clearFormData}
             />
           }
         />
@@ -97,6 +99,10 @@ const App = ({ signOut }) => {
               selectedArtwork={selectedArtwork}
               formData={formData}
               setFormData={setFormData}
+              alert={alert}
+              setAlert={setAlert}
+              clearFormData={clearFormData}
+              setUpload={setUpload}
             />
           }
         />

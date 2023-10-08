@@ -3,7 +3,14 @@ import "../styles/all-artworks.css";
 import { Link } from "react-router-dom";
 import deleteArtwork from "../requests/deleteArtwork";
 
-const AllArtworks = ({ artworks, alert, setDeleted, setSelectedArtwork }) => {
+const AllArtworks = ({
+  artworks,
+  alert,
+  setAlert,
+  setDeleted,
+  setSelectedArtwork,
+  clearFormData,
+}) => {
   if (artworks && artworks.length) {
     return (
       <div className="all-artworks">
@@ -32,7 +39,11 @@ const AllArtworks = ({ artworks, alert, setDeleted, setSelectedArtwork }) => {
                     to="/update-artwork"
                     className="all-artworks__thumbnail-link"
                     onClick={() => {
+                      setAlert(
+                        "Please be aware that you're not able to update artwork data with an empty value",
+                      );
                       setSelectedArtwork(artwork);
+                      clearFormData();
                     }}
                   >
                     Update

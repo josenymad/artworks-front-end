@@ -33,3 +33,32 @@
     border-style: solid;
     border-width: 1px;
 }
+
+.update-artwork__form__date {
+    font-size: 0.75em;
+    color: lightgray
+}
+
+.update-artwork__form__alert {
+    color: #face48;
+}
+
+.update-artwork__form__buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.update-artwork__form__button {
+    width: 30%;
+    margin: auto;
+    padding: 0.5em;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.update-artwork__form__button:hover {
+    cursor: pointer;
+    border-color: #face48;
+    background-color: #face48;
+}

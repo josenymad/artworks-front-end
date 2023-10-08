@@ -21,7 +21,7 @@ const AddArtwork = ({
       setFormData({ ...formData, [event.target.name]: event.target.value });
     }
   };
-  const handleUpload = async (event) => {
+  const handleUpload = (event) => {
     event.preventDefault();
     postArtwork(formData, setAlert, setUpload);
   };

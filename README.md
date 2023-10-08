@@ -14,7 +14,8 @@ This online portal solves these problems by organising information into a single
   - Upload and preview artwork
   - Search by company
   - Search by part number
-  - Delete artwork
+  - Delete artworks
+  - Update artworks
 
   More features will be added based on user and stakeholder feedback.
 
@@ -22,7 +23,6 @@ This online portal solves these problems by organising information into a single
 
   I have ideas to make this a go to sales platform. This is what I'm thinking of adding next:
   
-   - Update artworks
    - Display pricing
    - Email orders (to place a new order)
    - Email pricing (to request for pricing)

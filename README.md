@@ -4,7 +4,7 @@ Online portal to view and manage custom designs made for industrial grade tags/l
 
 ## Functionality
 
-After being hired at Certags, I recognised that I could use my skills as a software developer to create something which would increase efficiency and productivity. The vast majority of customer orders require a bespoke artwork to be designed prior to print. Over time, these designs ended up being stored across different colleague's computers, on different folders. When team members were on annual leave, some artworks would not be easily accessible. Furthermore, in cases of new starters being onboarded into the business, they would need to ask existing team members for artwork every time a repeat order was placed.
+I'm pleased to have the opportunity to  to use my skills as a software developer to create something which would increase efficiency and productivity within a business. The vast majority of customer orders at Certags require a bespoke artwork to be designed prior to print. Over time, these designs end up being stored across different folders, on several computers. When team members were on annual leave, some artworks would not be easily accessible. Furthermore, in cases of new starters being onboarded into the business, they would need to ask existing team members for artwork every time a repeat order was placed.
 
 This online portal solves these problems by organising information into a single, cloud based location.
 
@@ -28,3 +28,7 @@ This online portal solves these problems by organising information into a single
    - Email pricing (to request for pricing)
    - Email artwork (to request for new artwork or existing artwork amendments)
    - Sort by date
+
+### API
+
+I also built the API for this myself, here's a [link](https://github.com/josenymad/artworks_api) to the repo

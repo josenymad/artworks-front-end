@@ -25,7 +25,7 @@ Amplify.configure({
     oauth: {
       domain: REACT_APP_COGNITO_DOMAIN,
       scope: ["email", "openid"],
-      redirectSignIn: "http://localhost:3000",
+      redirectSignIn: "https://certags-artwork-portal.onrender.com/",
       responseType: "code",
     },
   },

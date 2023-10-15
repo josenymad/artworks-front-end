@@ -34,3 +34,14 @@ it("renders Add Artwork", () => {
 
   expect(addArtwork).toBeInTheDocument();
 });
+
+it("renders Log Out button", () => {
+  render(
+    <BrowserRouter>
+      <NavBar />
+    </BrowserRouter>,
+  );
+  const logOut = screen.getByText("Log Out");
+
+  expect(logOut).toBeInTheDocument();
+});

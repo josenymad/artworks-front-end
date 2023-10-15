@@ -30,6 +30,12 @@ exports[`All Artworks renders correctly with data 1`] = `
           >
             Full View
           </a>
+          <a
+            class="all-artworks__thumbnail-link"
+            href="/update-artwork"
+          >
+            Update
+          </a>
           <button
             class="all-artworks__thumbnail-delete"
             type="button"
@@ -88,6 +94,12 @@ exports[`All Artworks renders correctly with data 1`] = `
           >
             Full View
           </a>
+          <a
+            class="all-artworks__thumbnail-link"
+            href="/update-artwork"
+          >
+            Update
+          </a>
           <button
             class="all-artworks__thumbnail-delete"
             type="button"
@@ -145,6 +157,12 @@ exports[`All Artworks renders correctly with data 1`] = `
             target="_blank"
           >
             Full View
+          </a>
+          <a
+            class="all-artworks__thumbnail-link"
+            href="/update-artwork"
+          >
+            Update
           </a>
           <button
             class="all-artworks__thumbnail-delete"

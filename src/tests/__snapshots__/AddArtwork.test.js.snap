@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Artwork renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="add-artwork"
+  >
+    <form
+      class="add-artwork__form"
+      enctype="multipart/form-data"
+    >
+      <label
+        class="add-artwork__form__label"
+        for="company"
+      >
+        Company:
+      </label>
+      <input
+        class="add-artwork__form__input"
+        id="company"
+        maxlength="36"
+        name="company"
+        placeholder="Certags"
+        required=""
+        value=""
+      />
+      <label
+        class="add-artwork__form__label"
+        for="product"
+      >
+        Product:
+      </label>
+      <input
+        class="add-artwork__form__input"
+        id="product"
+        maxlength="36"
+        name="product"
+        placeholder="size, material, detail"
+        required=""
+        value=""
+      />
+      <label
+        class="add-artwork__form__label"
+        for="part-number"
+      >
+        Part Number:
+      </label>
+      <input
+        class="add-artwork__form__input"
+        id="part-number"
+        maxlength="36"
+        name="partNumber"
+        placeholder="CERUK0123"
+        value=""
+      />
+      <label
+        class="add-artwork__form__label"
+        for="date"
+      >
+        Date:
+      </label>
+      <input
+        class="add-artwork__form__input"
+        id="date"
+        name="date"
+        required=""
+        type="date"
+        value=""
+      />
+      <label
+        class="add-artwork__form__label"
+        for="image"
+      >
+        Image:
+      </label>
+      <input
+        accept=".pdf"
+        class="add-artwork__form__input"
+        id="image"
+        name="image"
+        required=""
+        type="file"
+      />
+      <div
+        class="add-artwork__form-buttons"
+      >
+        <button
+          class="add-artwork__form__button"
+          type="button"
+        >
+          CLEAR
+        </button>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;

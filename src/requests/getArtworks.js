@@ -6,6 +6,7 @@ const getArtworks = async (setArtworks, setAlert) => {
 
   try {
     const { data: artworks } = await axios.get(REACT_APP_API_ENDPOINT);
+    artworks.reverse();
     setArtworks(artworks);
   } catch (error) {
     setAlert(error.message);

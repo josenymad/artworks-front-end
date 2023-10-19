@@ -9,3 +9,12 @@
     background-color: #333333;
     border-radius: 5px;
 }
+
+.artwork-preview__alert {
+    max-width: 300px;
+    margin: auto;
+    background-color: #FEF2CD;
+    margin-top: 0.5em;
+    border-radius: 5px;
+    padding: 0.5em;
+}

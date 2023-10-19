@@ -15,6 +15,17 @@ describe("All Artworks", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it("renders the right amount of artwork data lists", () => {
+    render(
+      <BrowserRouter>
+        <AllArtworks artworks={mockData} />
+      </BrowserRouter>,
+    );
+    const renderedArtworks = screen.getAllByRole("list");
+
+    expect(renderedArtworks).toHaveLength(3);
+  });
+
   it("renders error without data", () => {
     render(
       <BrowserRouter>

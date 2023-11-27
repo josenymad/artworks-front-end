@@ -29,6 +29,7 @@ const postArtwork = async (
     if (response.status === 200) {
       setAlert("Artwork uploaded");
       setUpload(true);
+      setUploadProgress(0);
     }
   } catch (error) {
     setAlert(error);

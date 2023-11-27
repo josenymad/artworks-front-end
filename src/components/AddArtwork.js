@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/add-artwork.css";
 import postArtwork from "../requests/postArtwork";
 import ArtworkPreview from "./ArtworkPreview";
+import ProgressPercentage from "./ProgressPercentage";
 
 const AddArtwork = ({
   formData,
@@ -9,7 +10,10 @@ const AddArtwork = ({
   alert,
   setAlert,
   clearFormData,
+  upload,
   setUpload,
+  uploadProgress,
+  setUploadProgress,
 }) => {
   const { company, product, partNumber, date } = formData;
   const handleInputChange = (event) => {
@@ -23,12 +27,15 @@ const AddArtwork = ({
   };
   const handleUpload = (event) => {
     event.preventDefault();
-    postArtwork(formData, setAlert, setUpload);
+    postArtwork(formData, setAlert, setUpload, setUploadProgress);
   };
 
   return (
     <div className="add-artwork">
       {formData.image && <ArtworkPreview formData={formData} alert={alert} />}
+      {uploadProgress > 0 && !upload && (
+        <ProgressPercentage uploadProgress={uploadProgress} />
+      )}
       <form
         className="add-artwork__form"
         onSubmit={handleUpload}

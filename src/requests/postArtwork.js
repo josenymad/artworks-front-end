@@ -1,7 +1,12 @@
 import axios from "axios";
 import FormData from "form-data";
 
-const postArtwork = async (artworkData, setAlert, setUpload) => {
+const postArtwork = async (
+  artworkData,
+  setAlert,
+  setUpload,
+  setUploadProgress,
+) => {
   let { REACT_APP_API_ENDPOINT } = process.env;
   REACT_APP_API_ENDPOINT += "post";
   const formData = new FormData();
@@ -11,8 +16,16 @@ const postArtwork = async (artworkData, setAlert, setUpload) => {
   formData.append("date", artworkData.date);
   formData.append("image", artworkData.image);
 
+  const config = {
+    onUploadProgress: (progressEvent) => {
+      const { loaded, total } = progressEvent;
+      const percentCompleted = Math.floor((loaded * 100) / total);
+      setUploadProgress(percentCompleted);
+    },
+  };
+
   try {
-    const response = await axios.post(REACT_APP_API_ENDPOINT, formData);
+    const response = await axios.post(REACT_APP_API_ENDPOINT, formData, config);
     if (response.status === 200) {
       setAlert("Artwork uploaded");
       setUpload(true);

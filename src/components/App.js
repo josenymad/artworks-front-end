@@ -26,6 +26,7 @@ const App = ({ signOut }) => {
     date: "",
     image: "",
   });
+  const [uploadProgress, setUploadProgress] = useState(0);
 
   const handleSearchInput = (event) => {
     setSearchQuery(event.target.value);
@@ -88,7 +89,10 @@ const App = ({ signOut }) => {
               alert={alert}
               setAlert={setAlert}
               clearFormData={clearFormData}
+              upload={upload}
               setUpload={setUpload}
+              uploadProgress={uploadProgress}
+              setUploadProgress={setUploadProgress}
             />
           }
         />
